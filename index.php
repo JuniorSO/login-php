@@ -6,7 +6,7 @@ if(isset($_POST['btnSubmit'])) {
     $password = mysqli_real_escape_string($con, $_POST['txtPassword']);
 
     if($username != "" && $password != "") {
-        $sql_query = "SELECT COUNT(*) AS countUsers FROM users WHERE username='".$username."' and password='".$password."'";
+        $sql_query = "SELECT COUNT(*) AS countUsers FROM users WHERE username='".$username."' AND password='".$password."'";
         $result = mysqli_query($con, $sql_query);
         $row = mysqli_fetch_array($result);
 
